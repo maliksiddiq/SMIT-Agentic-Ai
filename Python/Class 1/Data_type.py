@@ -369,7 +369,6 @@ student_data = [
 # print(a is b)
 # print(a is c)
 
-
 # -------------------------------------------------------------------
 
 # Membership Operator  >>>> in 
@@ -386,4 +385,86 @@ student_data = [
 # print('world' in str1) #False
 
 # ----------------------------------------------------- type Casting --------------------------------
+
+# ! Implicit Type
+
+# num1 : int = 10
+# num2 : float = 15.5
+
+# result = num1 + num2
+# print(result)
+# print(type(result))
+
+
+# --------------------------------------------------------
+
+# ! Explicit Conversion 
+
+# name : str = 'Haider Ali'
+# age : int = 18
+# profession : str = 'Devloper' 
+
+# intro  = 'My name is ' + name + ' and my age is '  + str(age) +  ' and my profession is ' + profession
+# print(intro)
+
+
+# num_1 = str(10)
+# print(num_1) 
+# print(type(num_1)) 
+
+
+# cnic = int('12123425453')
+# print(cnic)
+# print(type(cnic))
+
+# --------------------------
+
+# cnic = float('12123425453')
+# print(cnic)
+# print(type(cnic))
+
+# --------------------------
+
+# is_happy = bool('True')
+# print(is_happy)
+# print(type(is_happy))
+
+# is_lazy = bool('False')
+# print(is_lazy) True
+# print(type(is_lazy)) bool
+
+
+# falsy = bool(0)
+# print(falsy) False
+# print(type(falsy)) bool
+
+
+# number_1 = bool(0)
+# print(number_1)
+# print(type(number_1))
+
+
+# number_2 = int(True)
+# print(number_2)
+# print(type(number_2))
+
+
+# number_3 = float(False)
+# print(number_3)
+# print(type(number_3))
+
+
+# cnic = int('sadad12123425453')
+# print(cnic)
+# print(type(cnic))
+
+
+# name = '10'
+# print(name)
+# print(type(name))
+
+# change = int(name)
+# print(type(change))
+
+# ------------------------------------------------------------------------------------------------------------
 
