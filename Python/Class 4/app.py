@@ -71,7 +71,7 @@
 
 # my_string: str = 'Hello! World'
 
-# # split into a list of words
+# # # split into a list of words
 # words: str = my_string.split()
 # print("my_string.split()    = ", words)
 # print(type(words))
@@ -106,4 +106,189 @@
 # starting_index = my_string.find('Hello')
 # print("starting_index = ", starting_index)
 
+# Second 'Hello'  Find
 
+# my_string: str = "Hello, World! Hello, Pakistan"
+# starting_index = my_string.find('Hello')
+# print("starting_index = ", starting_index)
+
+
+# starting_index2: str = starting_index  + len('Hello')
+# print(my_string[starting_index2:])
+# print(my_string[starting_index2:].find('Hello'))
+
+
+# -----------------------------------------
+
+# my_string: str = "Hello, World! Hello, Pakistan"
+# # print(my_string.index('hello')) #Error
+# # print(my_string.find('hello')) #-1
+
+# print(my_string.index('Hello' , len('Hello') , len(my_string)))
+
+
+# my_string : str = 'Hello World , Hello Pakistan'
+# check : int = my_string.count('Hello') 
+# print(check)
+# print(type(check))
+
+
+
+# my_string : str = 'Hello World , Hello Pakistan'
+# check : int = my_string.count('hello') 
+# print(check)
+# print(type(check))
+
+
+# ! ---------------------------------- String Formating --------------
+
+# name : str = "Ali"
+# age : int = 20
+
+# print("My name is Ali and I am 20 years old")  #Manually 
+
+# print("My name is {} and I am {} years old".format(name, age))
+
+# print(f'My name is {name} and I am {age} years old')
+
+# --------------------------------------------------------------------------
+
+# name : str = 'Malik Siddiq'
+# age : int = 20
+# profession : str = 'Devloper'
+
+# print(name , age , profession)
+# print(type(name) , type(age) , type(profession))
+
+
+# using str.format()
+
+# name : str = 'Haider'
+# age : int = 20
+
+# my_string: str = 'My name is {} and I am {} years old.'.format(age, name) #order matters
+# print("line 1: ",my_string)
+
+# my_string: str = 'My name is {1} and I am {0} years old.'.format(age, name) #use indexing
+# print("line 2: ",my_string)
+
+# ! F string
+
+# name : str = 'Haider'
+# age : int = 20
+
+# my_string: str = f'My name is {name} and I am {age} years old.' #Using Named Placeholders (Best for Readability)
+# print("line 3: ",my_string)
+
+
+# my_string: str = fr'My \name is {name} and I am {age}\n \t years \old.' #At the same time it could be f and r as well
+# print("line 4: ",my_string)
+
+
+# --------------------------- 
+
+# ! Pool of string literals = Python ka smart system jo same strings ko reuse karta hai taake memory aur speed dono improve ho
+
+# str1 : str = 'Hello'
+# str2 : str = 'Hello'
+# str3 : str = 'World'
+# str4 : str = 'World'
+
+# print(str1)
+# print(str2)
+# print(str3)
+# print(str4)
+
+
+
+# a : str = 'Hello'
+# b : str = 'Hello'
+
+# print(id(a))
+# print(id(b))
+
+# c : str = a + ''
+# print(id(c))
+
+# ----------------------------------------
+
+# message1 : str = 'asmdlasmd dfjsdbjfsjdbf sdjf sjd fj sdjf sdfsdf sdfsdf sdfsfgjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjsdfk  kkkkkkkkks sdfsdfsdfsf'
+# message2 : str = 'asmdlasmd dfjsdbjfsjdbf sdjf sjd fj sdjf sdfsdf sdfsdf sdfsfgjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjsdfk  kkkkkkkkks sdfsdfsdfsf'
+
+# print(id(message1))
+# print(id(message2))
+
+# print(message1 is message2)
+
+
+# str1 : str = 'Hello World'
+# str2 : str = 'Hello World'
+
+# print(str1 is str2)
+
+# str1 : str = 'Hello World'
+# str2 : str = 'Hello ' + 'World'
+# print(str1)
+# print(str2)
+# print(str1 is str2)
+
+
+
+# a = "this is a very long string"
+# b = "this is a very long string"
+# print(a is b)  # True (interned)
+# print("id(a)", id(a))
+# print("id(b)", id(b))
+
+
+# -------------------------------------------------------
+
+# Get the list of string methods
+# string_methods: str = dir(str)
+# print(string_methods)
+
+
+# ----------------------------------------------------
+
+#using string repetition in a loop.
+
+# String repetition examples
+
+# base_string = "Hello"
+# repetition_count = 3
+
+# repeated_string = base_string * repetition_count
+
+# print(f"Original string: {base_string}")
+# print(f"Repeated string: {repeated_string}")
+
+
+# separator = "-" * 30
+# print(separator)
+# print(type(separator))
+
+
+# for i in range(1,6):
+#   print("*"*i)
+
+
+# Repeating zero times
+# empty_string = "Test" * 0
+# print(f"Empty string: '{empty_string}'")
+
+
+
+# word = "mango"
+
+# if word > "apple":
+#     print(f"{word} comes after apple in alphabetical order")
+# else:
+#     print(f"{word} comes before apple in alphabetical order")
+
+
+# word : str = 'Strawberry'
+
+# if word > 'Banana':
+#     print(f'{word} comes after Banana in alphabetical order ')
+# else:
+#     print(f'{word} comes Before Banana in alphabetical order ')
