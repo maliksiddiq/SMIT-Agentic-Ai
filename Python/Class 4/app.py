@@ -241,12 +241,37 @@
 # print("id(b)", id(b))
 
 
-# -------------------------------------------------------
+# Manual Interning:
+
+# import sys
+
+# str1 : str = sys.intern('Hello World')
+# str2 : str = sys.intern('Hello World')
+
+# print(str1 is str2) #True
+
+# str1 : str = sys.intern(['Hello World'])
+# str2 : str = sys.intern(['Hello World'])
+
+# print(str1 is str2) # Type error ntern() argument must be str, not list
+
+# ------------------------------------------------------- 
 
 # Get the list of string methods
+
 # string_methods: str = dir(str)
 # print(string_methods)
 
+# print('\n')
+
+# x = "hello"
+# print(dir(x))
+
+# num = 10
+# print(dir(num))
+
+# import math
+# print(dir(math))
 
 # ----------------------------------------------------
 
@@ -292,3 +317,133 @@
 #     print(f'{word} comes after Banana in alphabetical order ')
 # else:
 #     print(f'{word} comes Before Banana in alphabetical order ')
+
+
+# !  ----------------------------- Type Casting ----------------------------
+
+# num_int: int = 10
+# num_float = num_int + 5.5  # int + float = float. skipped type hint to see what data type is assigned at runtime
+# print(num_float, type(num_float))
+
+
+# num_int: int = 7
+# num_complex: complex = num_int + 3j  # int + complex → complex
+# print(num_complex, type(num_complex))
+
+# num_int automatically promotes int to complex type
+# num_int = num_complex
+# print(num_int, type(num_int))
+
+
+# num_float: float = 9.8
+# num_int = int(num_float) # skipped type hint to see what data type is assigned at runtime
+# print(num_int, type(num_int))
+
+
+# b: bool = True
+# print("int(b) = ", int(b))
+
+
+# lst: list = [("name", "Alice"), ("age", 25)]
+# print(lst , type(lst))
+# d  = dict(lst)       # skipped type hint to see what data type is assigned at runtime
+# print(d, type(d))
+
+
+# num: int = 5
+# comp = complex(num)   # skipped type hint to see what data type is assigned at runtime
+# print(comp, type(comp)) 
+
+
+# float_num : float = 5.5
+# print(float_num , type(float_num))
+
+# convert : complex = complex(float_num)
+# print(convert , type(convert))
+
+# change =  str(convert)
+# print(change , type(change))
+
+
+# num : int = 5
+# compl  : complex = complex(num)
+# print(compl , type(compl))
+
+
+# compl : complex = 5 + 3j
+# print(compl , type(compl))
+
+# convert = int(compl)
+# print(convert  , type(convert))
+
+# a : int = int('10')
+# print(a , type(a))
+
+# b : float = float('10')
+# print(b , type(b))
+
+
+# num : str = str(10)
+# print(num  , type(num))
+# print(num  + '10' , type(num))
+
+
+# set_1  = set([1 , 2 , 3 , 3 , 4 , 5 , 6 , 5 ])  
+# print(set_1 , type(set_1))
+
+
+# list_1 = list({1 , 2 , 3 , 4 , 5 , 5 , 6 , 7})
+# print(list_1 , type(list_1))
+
+# print(list_1[0])
+
+
+# cnic =tuple(['1232435546' , '133245456576' , '1232445345466'])
+# print(cnic , type(cnic))
+
+# cnic[0] = '1111111111233'
+# print(cnic , type(cnic))
+
+
+# student_data = dict([('name ' , 'Siddiq') , ( 'age' , 20) , ('profession' , 'Devloper')])
+# print(student_data  , type(student_data))
+
+# print(student_data)
+# print(student_data['name ']
+
+
+# -----------------------------------------------
+
+
+# a = bool('')
+# print(a , type(a))
+
+# b = bool('False')
+# print(b , type(b))
+
+
+# b = 'False'  == 'True'
+# print(b , type(b)) 
+
+
+# user_input : str = 'False'
+# print(user_input , type(user_input))
+# save : bool = user_input.lower()  == 'true'
+# print(save , type(save))
+
+
+# num : int = 10
+# print(num  , type(num))
+# compl : complex = 5 + 3j
+# print(compl , type(compl))
+
+
+# add : complex = num + compl
+# print(add , type(add))
+
+
+# s = "python"
+# print(s[::-1])
+
+
+
