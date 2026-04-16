@@ -314,17 +314,6 @@
 # store_list(*(1 , 2 , 3 , 4 ,5)) #unpackng
 
 
-# def create_user(**data):
-#     print(data)
-
-# user_data = {
-#     "name": "Siddiq",
-#     "age": 20,
-#     "city": "Karachi"
-# }
-
-# create_user(**user_data)
-
 # def store_lists(*num):   
 #     print(f'The value is {num} and its type is {type(num)}')
 
@@ -339,9 +328,52 @@
 # func(first_name = 'Haider' , last_name = 'Ali' , cnic = 123134342 , profession = 'Devloper')
 
 
+# def create_user(*data):
+#     print(data)
+
+# user_data = {
+#     "name": "Siddiq",
+#     "age": 20,
+#     "city": "Karachi" 
+# }
+
+# create_user(*user_data) #('name', 'age', 'city')
+
+# def create_user(**data):
+#     print(data)
+
+# user_data = {
+#     "name": "Siddiq",
+#     "age": 20,
+#     "city": "Karachi" 
+# }
+
+# create_user(**user_data) #{'name': 'Siddiq', 'age': 20, 'city': 'Karachi'}
 
 
+# def store_data(data):
+#     print(data)
 
+
+# student_info : dict = [
+# {
+#      'name' : 'Siddiq' ,
+#      'age' : 20 ,
+#      'profession' : 'Devloper'  
+    
+#  } ,
+# {
+#     'name' : 'Haider' ,
+#      'age' : 18 ,
+#      'profession' : 'Designer'  
+# } 
+# ]
+
+# print(student_info)
+# print(student_info[0])
+# print(student_info[1])
+
+# store_data(student_info)
 
 
 
