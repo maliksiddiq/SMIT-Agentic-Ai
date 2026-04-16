@@ -36,7 +36,7 @@
 
 # !Third Party Module
 
-# !pip install request
+# pip install request
 
 # import requests
 
@@ -63,7 +63,7 @@
 
 # print(numpy.__version__)
 
-# import numpy as npmath
+# import numpy as np
 
 # print(np.array([1, 2, 3]))
 
@@ -106,6 +106,7 @@
 # from math import * # wild card
 # print(sin(0))
 
+# import math
 
 # -----------------------------------------------
 
@@ -136,7 +137,31 @@
 
 # import custom
 
-# print(custom.my_function())
+# custom.my_function()
+
+# custom.outer_func()
+# custom.inner_func()
+
+
+# def outer_func():
+#     print('Outer Function')
+#     def inner_func():
+#         print('Inner function')
+#     inner_func()
+#     inner_func()
+
+# outer_func()
+
+
+# x = 10
+
+# def var():
+#     x = 20
+#     print(x)
+# print(x)
+
+# var()
+# print(x)
 
 
 # !Types of functions
@@ -160,10 +185,165 @@
 
 # --------------- Function Syntax --------
 
-def greetings():
-   "This is docstring of greetings function"
-   greet = 'Hello World!'
-   return greet
+# def greetings():
+#    "This is docstring of greetings function"
+#    greet = 'Hello World!'
+#    return greet
 
-message = greetings()
-print(message)
+# # greetings()
+
+# message = greetings()
+# print(message)
+
+
+# -------------- Pass By refernce vs value -------- 
+
+# def modify_value(x):
+#     x = 10
+#     print("Within function:", x)
+
+# # Immutable object (integer)
+# x = 5
+# print("Original:", x)
+# modify_value(x)
+# print("After function:", x)
+
+
+# ---------------------------------- Function argument ---------------
+
+# def greet(name):
+#     print('Well Come to our Website! ' , name)
+
+# greet('Haider Ali')
+# greet('Hamza')
+# greet('Ali')
+# greet()
+
+
+# def intro(name , age , profession):
+#     print(f'My name is {name} and i am {age} Years old and i am a {profession}') 
+
+# intro('Siddiq' , 20 , 'Devloper')    
+# intro('Haider Ali' , 18 , 'Designer')    
+# intro('Mazhar Ali' , 25 , 'Programer')    
+
+
+
+# def intro(name , age , profession):
+#     print(f'My name is {name} and i am {age} Years old and i am a {profession}') 
+
+# intro(20 , 'Siddiq' , 'Devloper')    
+# intro(18 , 'Haider Ali' , 'Designer')    
+# intro( 25 , 'Mazhar Ali' , 'Programer')   
+
+
+# def greetings(name):
+#    "This is docstring of greetings function"
+#    print ("Hello {}".format(name))
+#    return
+
+# greetings("Ali")
+# greetings("Omar")
+# greetings("Usman")
+
+# ! ------------------------ 
+
+
+# def intro(name , age , profession):
+#     print(f'My name is {name} and i am {age} Years old and i am a {profession}') 
+
+# intro(age=20 , name='Siddiq' , profession='Devloper')    
+# intro(age=18 , name='Haider Ali' , profession='Designer')    
+# intro(age=25 , name='Mazhar Ali' , profession='Programer')   
+
+# ----------------------------------- Error Solve -----------------------
+
+# def intro(name , age , profession):
+#     print(f'My name is {name} and i am {age} Years old and i am a {profession}') 
+
+# intro(age=20 , name='Siddiq' , 'Devloper')   #Error 
+# intro(age=18 , name='Haider Ali' , 'Designer')   #Error 
+# intro(age=25 , name='Mazhar Ali' , 'Programer')  #Error
+
+
+# intro('Siddiq' , profession= 'Devloper' , age= 20)    
+# intro('Haider Ali', profession= 'Designer' , age=18)    
+# intro('Mazhar Ali' , profession= 'Programer' , age=25)  
+
+# ---------------------------------------------------------------------------------------
+
+# def add(x: int,y: int=0) -> float:
+#    return float(x + y)
+
+# print(float(add(10,20)))
+
+# print(add(y=50.0, x=2.0)) # type hints are not enforced in Python
+
+# print(add(x=5))
+
+
+# ---------------------------------------------------------------------------------------
+
+# ! Packing 
+
+# def func(*nums):
+#     print(nums , type(nums))
+
+# func(1, 2, 3, 4) 
+
+
+# ! Unpacking 
+
+# nums = (1, 2, 3)
+
+# a, b, c = nums
+# print(a, b, c)
+
+
+# def store_list(num): #Error   
+#     print(f'The value is {num} and its type is {type(num)}')
+
+# store_list(*[1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10]) #unpackng
+# store_list(*(1 , 2 , 3 , 4 ,5)) #unpackng
+
+
+# def store_list(*num): #Solve the error   
+#     print(f'The value is {num} and its type is {type(num)}')
+
+# store_list(*[1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10]) #unpackng
+# store_list(*(1 , 2 , 3 , 4 ,5)) #unpackng
+
+
+# def create_user(**data):
+#     print(data)
+
+# user_data = {
+#     "name": "Siddiq",
+#     "age": 20,
+#     "city": "Karachi"
+# }
+
+# create_user(**user_data)
+
+# def store_lists(*num):   
+#     print(f'The value is {num} and its type is {type(num)}')
+
+# store_lists(*[1 , 2, 3 , 4] , [5 , 6 , 7 , 8 , 9 , 10])
+# store_lists(*(1 , 2, 3 , 4) , (5 , 6 , 7 , 8 , 9 , 10))
+
+
+# def func(**student_data):
+#     print(f'The value is {student_data} and its type is {type(student_data)}')
+
+# func(first_name = 'Haider' , last_name = 'Ali') #as a dict data type
+# func(first_name = 'Haider' , last_name = 'Ali' , cnic = 123134342 , profession = 'Devloper')
+
+
+
+
+
+
+
+
+# Error in This Code 
+# store_lists(*{'name' : 'Haider Ali' , 'age' : 18 , 'Profession' : 'Devloper'} , {'name' : 'Siddiq' , 'age' : 20})
